@@ -38,11 +38,7 @@ get '/auth/:provider/callback' do
       :twitter_id   => auth_data['uid'],
       :name         => auth_data['info']['name'],
       :nickname     => auth_data['info']['nickname'],    
-      :location     => auth_data['info']['location'],
-      :description  => auth_data['info']['description'],
       :image        => auth_data['info']['image'],
-      :twitter_url  => auth_data['info']['urls']['Twitter'],
-      :website      => auth_data['info']['urls']['Website']
     )
   end
 
