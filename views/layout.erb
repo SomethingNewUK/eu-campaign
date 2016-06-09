@@ -2,85 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Cleanweb UK</title>
+    <title>Something New: EU Referendum</title>
     <meta name="author" content="Cleanweb Manifesto">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="<%=BASE_URL%>">
     <link href="//<%=ASSET_HOST%>/favicon.png" rel="icon">
-    <link href="//<%=ASSET_HOST%>/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="//<%=ASSET_HOST%>/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="//<%=ASSET_HOST%>/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      body {
-        padding-bottom: 40px;
-      }
-      h1 {
-        margin-bottom: 15px;
-      }
-      img {
-        max-width: 100%;
-      }
-      .sharing, .meta, .pager {
-        margin: 20px 0px 20px 0px;
-      }
-      .page-footer p {
-        text-align: center;
-      }
-    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   </head>
   <body>
-    <nav role="navigation">
-      <div class="navbar">
-        <div class="navbar-inner">
-          <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="http://cleanweb.org.uk/">Cleanweb UK</a>
-            <div class="nav-collapse">
-              <ul class="nav">
-                <li><a href="http://<%=ASSET_HOST%>/">Home</a></li>
-                <li><a href="http://<%=ASSET_HOST%>/manifesto.html">Manifesto</a></li>
-                <li><a href="http://<%=ASSET_HOST%>/ignite.html">Ignite</a></li>
-                <li><a href="http://<%=ASSET_HOST%>/events.html">Events</a></li>
-                <li><a href="http://<%=ASSET_HOST%>/contact.html">Contact</a></li>
-                <li><a href="http://<%=ASSET_HOST%>/about.html">About</a></li>
-              </ul>
-              <ul class="nav pull-right" data-subscription="rss">
-                <li><a href="http://<%=ASSET_HOST%>/atom.xml" rel="subscribe-rss" title="subscribe via Atom"><img src='//<%=ASSET_HOST%>/images/rss.png' width='16px' height='16px' alt='Subscribe'/></a></li>  
-              </ul>
-              <ul class="nav pull-right">
-                <li><a href="http://cleanweb.co">Cleanweb Global</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
     <div class="container">
       <div class="row-fluid">
-        <div class="span9">
+        <div class="col-sm-9">
           <%= yield %>
         </div>
-        <div class="sidebar-nav span3">  
-          <div class='logo'>
-            <img src='//<%=ASSET_HOST%>/images/tree.png'/>
-          </div>
-          <div class='logo'>
-            <iframe src='/count' style='width: 200px; height: 150px; border: 0px; border-radius: 10px'/>
-          </div>
+        <div class="col-sm-3">
+          <iframe src='/count' style='width: 200px; height: 150px; border: 0px; border-radius: 10px'/>
         </div>
       </div>
-      <footer role="contentinfo" class="page-footer"><hr>
-        <p>
-          <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License"  style="border-width:0; vertical-align: middle;" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> -
-          <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-        </p>
-      </footer>
     </div>
   </body>
 </html>
