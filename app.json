@@ -9,9 +9,6 @@
     "TWITTER_CONSUMER_SECRET": {
       "description": "The twitter app consumer secret",
     },
-    "ASSET_HOST": {
-      "description": "The hostname where assets are loaded from",
-    },
     "BASE_URL": {
       "description": "The URL of the app",
     }
