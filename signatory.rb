@@ -1,4 +1,4 @@
-class Signee
+class Signatory
   include Mongoid::Document
   
   field :twitter_id, type: Integer

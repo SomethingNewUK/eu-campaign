@@ -4,7 +4,7 @@ require 'json'
 require 'omniauth'
 require 'omniauth-twitter'
 require 'mongoid'
-require './signee'
+require './signatory'
 require 'dotenv'
 
 Dotenv.load
@@ -31,8 +31,8 @@ get '/auth/:provider/callback' do
   auth_data = request.env['omniauth.auth']
   session[:user] = "#{auth_data['provider']}:#{auth_data['uid']}"
   # Store signature
-  if Signee.find_by(:twitter_id => auth_data['uid']).nil?
-    s = Signee.create( 
+  if Signatory.find_by(:twitter_id => auth_data['uid']).nil?
+    s = Signatory.create( 
       :twitter_id   => auth_data['uid'],
       :name         => auth_data['info']['name'],
       :nickname     => auth_data['info']['nickname'],    
@@ -58,17 +58,17 @@ end
   
 get '/signed' do
   redirect '/' and return unless session[:user]
-  @count = Signee.count
+  @count = Signatory.count
   erb :signed
 end
 
 get '/signatories' do
-  @count = Signee.count
-  @signatories = Signee.all.reverse
+  @count = Signatory.count
+  @signatories = Signatory.all.reverse
   erb :signatories, :layout => false
 end
 
 get '/count' do
-  @count = Signee.count
+  @count = Signatory.count
   erb :count, :layout => false
 end
