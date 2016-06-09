@@ -3,13 +3,24 @@
   "scripts": {
   },
   "env": {
+    "TWITTER_CONSUMER_KEY": {
+      "description": "The twitter app consumer key",
+    },
+    "TWITTER_CONSUMER_SECRET": {
+      "description": "The twitter app consumer secret",
+    },
+    "DOMAIN": {
+      "description": "The domain of the app",
+    }
   },
   "formation": {
   },
   "addons": [
-
+    "monglab:sandbox"
   ],
   "buildpacks": [
-
+    {
+      "url": "heroku/ruby"
+    }
   ]
 }
