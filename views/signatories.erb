@@ -26,11 +26,11 @@
   </head>
   <body>
     <ul class="thumbnails">
-      <% @signatories.each do |signee| %>
+      <% @signatories.each do |signatory| %>
         <li>
-          <a href="<%= signee['twitter_url'] %>" class="thumbnail" target ='_top' 
-            rel='tooltip' data-placement="bottom" data-original-title="<%= signee['name'] %><br/>@<%= signee['nickname'] %>">
-            <img src="<%= signee['image'] %>" alt="<%= signee['nickname'] %>">
+          <a href="https://twitter.com/<%= signatory['nickname'] %>" class="thumbnail" target ='_top' 
+            rel='tooltip' data-placement="bottom" data-original-title="<%= signatory['name'] %><br/>@<%= signatory['nickname'] %>">
+            <img src="<%= signatory['image'] %>" alt="<%= signatory['nickname'] %>">
             <div style='clear:left'></div>
           </a>
         </li>
