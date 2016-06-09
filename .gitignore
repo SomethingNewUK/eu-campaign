@@ -1,4 +1,4 @@
 .powrc
 /tmp/
-
 /vendor/
+.env
