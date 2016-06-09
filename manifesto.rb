@@ -12,6 +12,7 @@ Dotenv.load
 
 Mongoid.load!('mongoid.yml')
 
+BASE_URL = ENV['BASE_URL'] || 'http://localhost:9292'
 ASSET_HOST = ENV['ASSET_HOST'] || 'cleanweb.org.uk'
 
 configure do
