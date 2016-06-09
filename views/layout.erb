@@ -7,11 +7,11 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="http://manifesto.<%=DOMAIN%>">
-    <link href="//<%=DOMAIN%>/favicon.png" rel="icon">
-    <link href="//<%=DOMAIN%>/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="//<%=DOMAIN%>/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="//<%=DOMAIN%>/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="<%=BASE_URL%>">
+    <link href="//<%=ASSET_HOST%>/favicon.png" rel="icon">
+    <link href="//<%=ASSET_HOST%>/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="//<%=ASSET_HOST%>/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="//<%=ASSET_HOST%>/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
     <style type="text/css">
       body {
         padding-bottom: 40px;
@@ -43,15 +43,15 @@
             <a class="brand" href="http://cleanweb.org.uk/">Cleanweb UK</a>
             <div class="nav-collapse">
               <ul class="nav">
-                <li><a href="http://<%=DOMAIN%>/">Home</a></li>
-                <li><a href="http://<%=DOMAIN%>/manifesto.html">Manifesto</a></li>
-                <li><a href="http://<%=DOMAIN%>/ignite.html">Ignite</a></li>
-                <li><a href="http://<%=DOMAIN%>/events.html">Events</a></li>
-                <li><a href="http://<%=DOMAIN%>/contact.html">Contact</a></li>
-                <li><a href="http://<%=DOMAIN%>/about.html">About</a></li>
+                <li><a href="http://<%=ASSET_HOST%>/">Home</a></li>
+                <li><a href="http://<%=ASSET_HOST%>/manifesto.html">Manifesto</a></li>
+                <li><a href="http://<%=ASSET_HOST%>/ignite.html">Ignite</a></li>
+                <li><a href="http://<%=ASSET_HOST%>/events.html">Events</a></li>
+                <li><a href="http://<%=ASSET_HOST%>/contact.html">Contact</a></li>
+                <li><a href="http://<%=ASSET_HOST%>/about.html">About</a></li>
               </ul>
               <ul class="nav pull-right" data-subscription="rss">
-                <li><a href="http://<%=DOMAIN%>/atom.xml" rel="subscribe-rss" title="subscribe via Atom"><img src='//<%=DOMAIN%>/images/rss.png' width='16px' height='16px' alt='Subscribe'/></a></li>  
+                <li><a href="http://<%=ASSET_HOST%>/atom.xml" rel="subscribe-rss" title="subscribe via Atom"><img src='//<%=ASSET_HOST%>/images/rss.png' width='16px' height='16px' alt='Subscribe'/></a></li>  
               </ul>
               <ul class="nav pull-right">
                 <li><a href="http://cleanweb.co">Cleanweb Global</a></li>
@@ -68,7 +68,7 @@
         </div>
         <div class="sidebar-nav span3">  
           <div class='logo'>
-            <img src='//<%=DOMAIN%>/images/tree.png'/>
+            <img src='//<%=ASSET_HOST%>/images/tree.png'/>
           </div>
           <div class='logo'>
             <iframe src='/count' style='width: 200px; height: 150px; border: 0px; border-radius: 10px'/>

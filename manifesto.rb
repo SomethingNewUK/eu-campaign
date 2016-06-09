@@ -9,9 +9,10 @@ require 'dotenv'
 
 Dotenv.load
 
+
 Mongoid.load!('mongoid.yml')
 
-DOMAIN = ENV['DOMAIN'] || 'cleanweb.org.uk'
+ASSET_HOST = ENV['ASSET_HOST'] || 'cleanweb.org.uk'
 
 configure do
   set :sessions, true
