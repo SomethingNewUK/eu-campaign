@@ -34,6 +34,8 @@ get '/auth/:provider/callback' do
   case auth_data['provider']
   when "twitter"
     Signatory.create_from_twitter(auth_data)
+  when "facebook"
+    Signatory.create_from_facebook(auth_data)
   else
     raise "oh dear, unknown provider #{auth_data['provider']}"
   end
