@@ -31,16 +31,12 @@ get '/auth/:provider/callback' do
   # Get omniauth data
   auth_data = request.env['omniauth.auth']
   session[:user] = "#{auth_data['provider']}:#{auth_data['uid']}"
-  # Store signature
-  if Signatory.find_by(:twitter_id => auth_data['uid']).nil?
-    s = Signatory.create( 
-      :twitter_id   => auth_data['uid'],
-      :name         => auth_data['info']['name'],
-      :nickname     => auth_data['info']['nickname'],    
-      :image        => auth_data['info']['image'],
-    )
+  case auth_data['provider']
+  when "twitter"
+    Signatory.create_from_twitter(auth_data)
+  else
+    raise "oh dear, unknown provider #{auth_data['provider']}"
   end
-
   # Redirect to signed page
   redirect '/signed'
 end
