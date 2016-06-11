@@ -14,12 +14,27 @@
   </head>
   <body>
     <div class="container">
+      <h1>Sign the pledge</h1>
       <div class="row-fluid">
         <div class="col-sm-9">
           <%= yield %>
         </div>
         <div class="col-sm-3">
-          <iframe src='/count' style='width: 200px; height: 150px; border: 0px; border-radius: 10px'/>
+          <iframe src='/count' style='width: 200px; height: 150px; border: 0px; border-radius: 5px'></iframe>
+          <div class='alert alert-info'>
+            <h4><i class='fa fa-info-circle'></i> <strong>Privacy info</strong></h4>
+            <p>
+              When you pledge, we only store and display your:
+            </p>
+            <ul>
+              <li>name</li>
+              <li>profile picture</li>
+              <li>profile link</li>
+            </ul>
+            <p>
+              We won't use any of it for any purpose other than showing your signature.
+            </p>
+          </div>
         </div>
       </div>
     </div>
