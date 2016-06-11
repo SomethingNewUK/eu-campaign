@@ -5,10 +5,9 @@ require 'omniauth'
 require 'omniauth-twitter'
 require 'mongoid'
 require './signatory'
+
 require 'dotenv'
-
 Dotenv.load
-
 
 Mongoid.load!('mongoid.yml')
 
@@ -19,6 +18,7 @@ configure do
   set :inline_templates, true
   set :root, File.dirname(__FILE__)
 end
+
 use OmniAuth::Builder do
   provider :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
 end
@@ -62,10 +62,10 @@ end
 get '/signatories' do
   @count = Signatory.count
   @signatories = Signatory.all.reverse
-  erb :signatories, :layout => false
+  erb :signatories, layout: false
 end
 
 get '/count' do
   @count = Signatory.count
-  erb :count, :layout => false
+  erb :count, layout: false
 end
