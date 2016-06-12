@@ -16,7 +16,7 @@
     <% @signatories.each do |signatory| %>
       <a href="<%= signatory['url'] || BASE_URL %>" class='thumbnail' style='display: inline-block' target ='_new' 
         rel='tooltip' data-placement="bottom" data-html="true" data-original-title="<%= [signatory['name'], signatory['nickname']].compact.join('<br/>') %>">
-        <img src="<%= signatory['image'] %>" alt="<%= signatory['name'] %>">
+        <img src="<%= signatory['image'] || '/signatory.png'%>" alt="<%= signatory['name'] %>">
       </a>
     <% end %>
     <script type="text/javascript">
