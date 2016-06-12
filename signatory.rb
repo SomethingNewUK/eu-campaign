@@ -31,7 +31,7 @@ class Signatory
       facebook_id: auth_data['uid'],
       name:        auth_data['info']['name'],
       image:       auth_data['info']['image'],
-      url:         auth_data['info']['urls']['Facebook'],
+      url:         (auth_data['info']['urls'] || {})['Facebook'],
     }
     # Store signature
     s = Signatory.find_by(facebook_id: data[:facebook_id])
