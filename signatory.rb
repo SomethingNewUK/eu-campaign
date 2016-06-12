@@ -12,7 +12,7 @@ class Signatory
     data = {
       twitter_id: auth_data['uid'],
       name:       auth_data['info']['name'],
-      nickname:   auth_data['info']['nickname'],    
+      nickname:   '@'+auth_data['info']['nickname'],    
       image:      auth_data['info']['image'],
       url:        auth_data['info']['urls']['Twitter'],
     }
