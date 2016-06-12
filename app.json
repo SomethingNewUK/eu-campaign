@@ -9,6 +9,12 @@
     "TWITTER_CONSUMER_SECRET": {
       "description": "The twitter app consumer secret",
     },
+    "FACEBOOK_KEY": {
+      "description": "The facebook app consumer key",
+    },
+    "FACEBOOK_SECRET": {
+      "description": "The facebook app consumer secret",
+    },
     "BASE_URL": {
       "description": "The URL of the app",
     }
