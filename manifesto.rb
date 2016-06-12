@@ -11,7 +11,7 @@ Dotenv.load
 
 Mongoid.load!('mongoid.yml')
 
-BASE_URL = ENV['BASE_URL'] || 'http://localhost:9292'
+BASE_URL = ENV['BASE_URL'] || 'http://localhost:9292/'
 
 configure do
   set :sessions, true
