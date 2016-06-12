@@ -22,8 +22,8 @@ configure do
 end
 
 use OmniAuth::Builder do
-  provider :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
-  provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+  provider :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'], {secure_image_url: true}
+  provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], {secure_image_url: true, image_size: {width: 48, height: 48}}
 end
   
 get '/' do
