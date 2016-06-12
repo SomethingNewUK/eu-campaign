@@ -15,6 +15,7 @@ BASE_URL = ENV['BASE_URL'] || 'http://localhost:9292/'
 
 configure do
   set :sessions, true
+  set :session_secret, SecureRandom.hex(32)
   set :inline_templates, true
   set :root, File.dirname(__FILE__)
 end
