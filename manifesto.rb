@@ -33,9 +33,9 @@ get '/auth/:provider/callback' do
   session[:user] = "#{auth_data['provider']}:#{auth_data['uid']}"
   case auth_data['provider']
   when "twitter"
-    Signatory.create_from_twitter(auth_data)
+    Signatory.create_or_update_from_twitter(auth_data)
   when "facebook"
-    Signatory.create_from_facebook(auth_data)
+    Signatory.create_or_update_from_facebook(auth_data)
   else
     raise "oh dear, unknown provider #{auth_data['provider']}"
   end
